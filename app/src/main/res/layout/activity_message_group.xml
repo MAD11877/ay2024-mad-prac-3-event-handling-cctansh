@@ -49,6 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="409dp"
         android:layout_height="535dp"
         app:layout_constraintBottom_toBottomOf="parent"
