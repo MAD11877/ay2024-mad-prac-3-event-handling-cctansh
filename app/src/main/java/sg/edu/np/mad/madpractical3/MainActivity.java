@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         TextView btnFollow = findViewById(R.id.btnFollow);
+        TextView btnMessage = findViewById(R.id.btnMessage);
 
         tvName.setText(user.name + " " + random);
         tvDescription.setText(user.description);
@@ -53,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Unfollowed", Toast.LENGTH_SHORT).show();
                     Log.i("btnFollow", "onClick: Unfollowed");
                 }
+            }
+        });
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent msgIntent = new Intent(MainActivity.this, MessageGroup.class);
+                startActivity(msgIntent);
             }
         });
     }

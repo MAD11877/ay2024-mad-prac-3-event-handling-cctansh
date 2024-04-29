@@ -33,8 +33,6 @@ public class ListActivity extends AppCompatActivity {
             return insets;
         });
 
-
-
         ImageView icon = findViewById(R.id.icon);
 
         icon.setOnClickListener(new View.OnClickListener() {
